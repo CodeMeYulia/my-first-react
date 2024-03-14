@@ -1,25 +1,84 @@
-import logo from './logo.svg';
 import './App.css';
+import { Button, Table } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Chart } from "react-google-charts";
 
 function App() {
+  const obj = { name: 'Hanna', age: 38, city: 'Copengagen' };
+  const { name, age, city } = obj;
+  console.log(name, age);
+
+  const data = [
+    ["ID", "Ожидаемая продолжительность жизни", "Коэффициент рождаемости", "Регион", "Популяция"],
+    ["Канада", 80.66, 1.67, "Северная Америка", 33739900],
+    ["Германия", 79.84, 1.36, "Европа", 81902307],
+    ["Дания", 78.6, 1.84, "Европа", 5523095],
+    ["Египет", 72.73, 2.78, "Ближний Восток", 79716203],
+    ["Великобритания", 80.05, 2, "Европа", 61801570],
+    ["Иран", 72.49, 1.7, "Ближний Восток", 73137148],
+    ["Ирак", 68.09, 4.77, "Ближний Восток", 31090763],
+    ["Израиль", 81.55, 2.96, "Ближний Восток", 7485600],
+    ["Россия", 68.6, 1.54, "Европа", 141850000],
+    ["США", 78.09, 2.05, "Северная Америка", 307007000],
+  ];
+
+  const options = {
+    title:
+      "Корреляция между ожидаемой продолжительностью жизни и уровнем рождаемости " +
+      "и население некоторых стран мира (2010 г.)",
+    hAxis: { title: "Ожидаемая продолжительность жизни" },
+    vAxis: { title: "Коэффициент рождаемости" },
+    bubble: { textStyle: { fontSize: 14 } },
+  };
+
+  const dataPie = [
+    ["Согласия", "Процент от общ. числа старообрядцев"],
+    ["Адамантовы", 3],
+    ["Бегуны", 7],
+    ["Дырники", 12],
+    ["Любушкино согласие", 18],
+    ["Немоляки", 6],
+    ["Нетовское согласие (Спасово)", 11],
+    ["Поморское согласие", 5],
+    ["Рябиновцы", 8],
+    ["Федосеевское согласие", 9],
+    ["Часовенное согласие", 6],
+    ["Керженское согласие", 15],
+  ];
+
+  const optionsPie = {
+    title: "Согла́сие (Соглас) — группа объединений христиан в старообрядчестве, придерживающаяся той или иной разновидности вероучительной и обрядовой практики. В соотношении использованы цифры, не имеющие отношения к действительности, носят характер примера",
+    PieChart: { textStyle: { fontSize: 6 } },
+    is3D: true,
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Hello, app!</h1>
+        <p>Let`s talk. Or not. Or yes.</p>
+        <p>What do u want?</p>
+        <br></br>
+        <Chart
+          chartType="PieChart"
+          data={dataPie}
+          options={optionsPie}
+          width={"100%"}
+          height={"400px"}
+        />
+        <br></br>
+        <Chart
+          chartType="BubbleChart"
+          width="100%"
+          height="500px"
+          data={data}
+          options={options}
+        />
+        <br></br>
       </header>
     </div>
   );
 }
 
 export default App;
+// export default TypesExample;
