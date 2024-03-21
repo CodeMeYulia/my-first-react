@@ -83,8 +83,10 @@ img {
 
 .item {
   align-items: center;
+  background-color: azure;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   /* background-color: rgba(253, 4, 232, 0.74); */
   width: 32%;
   margin-bottom: 10px;
@@ -98,7 +100,6 @@ img {
 .info__block {
   display: flex;
   flex-direction: column;
-  background-color: aliceblue;
 }
 
 .universe,
