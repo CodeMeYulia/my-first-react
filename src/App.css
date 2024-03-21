@@ -1,38 +1,127 @@
 .App {
+  max-width: 1300px;
+  height: auto;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+  background-color: rgb(203, 252, 28);
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  padding: 20px;
+}
+
+.myForm {
+  border: 1px dashed grey;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: rgb(164, 234, 247);
+  margin: auto;
+  width: 32%;
+}
+
+.card-body {
+  background-color: azure;
+}
+
+img {
+  width: 100%;
+}
+
+.card-title {
+  background-color: rgba(253, 4, 232, 0.74);
+  padding: 10px 0;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+.card-price {
+  font-size: 18px;
+  padding-right: 5px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.card-text {
+  border: 1px dashed grey;
+  margin: 0 10px;
+}
+
+.card-add {
+  background-color: rgb(12, 206, 196);
+  border-radius: 5px;
+  border: 1px solid rgb(208, 253, 251);
+  padding: 0 15px;
+}
+
+.item {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background-color: rgba(253, 4, 232, 0.74); */
+  width: 32%;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.character {
+  min-height: 290px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info__block {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+}
+
+.universe,
+.alterego,
+.occupation,
+.friends,
+.superpowers {
+  font-size: 1.4em;
+  text-align: start;
+  padding-left: 15px;
+  line-height: 20px;
+}
+
+.h3 {
+  font-weight: 700;
+  font-style: italic;
+  padding-right: 10px;
+}
+
+.info {
+  background-color: rgba(247, 175, 241, 0.74);
+  padding: 20px 30px;
+  font-size: larger;
+  text-align: left;
+  min-height: 500px;
 }
