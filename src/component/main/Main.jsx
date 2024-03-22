@@ -10,6 +10,7 @@ const Main = () => {
             <h1>Изучаем React</h1>
             <HeroList />
             <br />
+            <div className="divide"></div>
             <CardList />
             <Charts />
             <div className="myForm">
