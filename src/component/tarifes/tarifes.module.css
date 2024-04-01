@@ -1,0 +1,91 @@
+:root {
+    --color1: rgb(2, 135, 139);
+    --color1_2: rgb(64, 216, 216);
+
+    --color2: green;
+    --color2_2: rgb(86, 218, 86);
+
+    --color3: rgb(138, 0, 76);
+    --color3_2: rgb(230, 79, 172);
+
+    --color4: rgb(14, 14, 14);
+    --color4_2: rgb(56, 56, 56);
+}
+
+.cardHeaderBlue {
+    background-color: var(--color1);
+    padding: 20px 30px;
+    color: azure;
+}
+
+.cardBodyBlue {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color1_2);
+}
+
+.cardHeaderGreen {
+    background-color: var(--color2);
+    padding: 20px 30px;
+    color: azure;
+}
+
+.cardBodyGreen {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color2_2);
+}
+
+.cardHeaderPink {
+    background-color: var(--color3);
+    padding: 20px 30px;
+    color: azure;
+}
+
+.cardBodyPink {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color3_2);
+}
+
+.cardHeaderBlack {
+    background-color: var(--color4);
+    padding: 20px 30px;
+    color: azure;
+}
+
+.cardBodyBlack {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color4_2);
+}
+
+.cardMoney {
+    text-align: start;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 15px;
+    color: azure;
+}
+
+.cardPrice {
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: azure;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cardFooter {
+    background-color: aliceblue;
+    padding: 10px 0 0 0;
+}
+
+.cardNote {
+    background-color: rgb(192, 192, 192);
+    padding: 15px;
+}

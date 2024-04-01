@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button/Button";
+import style from './form.module.css';
 
 const Form = () => {
     return (
@@ -8,7 +9,8 @@ const Form = () => {
             <label htmlFor="myForm">введите текст</label>
             <input type="text" id="myForm" />
             <Button />
-        </form>
+            <button className={style.btn1}>кнопка форм</button>
+        </form >
     );
 }
 

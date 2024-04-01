@@ -1,10 +1,12 @@
+import style from './listitem.module.css'
+
 function Listitem(props) {
     return (
-        <div class="Listitem">
-            <input type="checkbox"></input>
-
-            <label> {props.name} </label>
-        </div>
+        <div className={style.item}>
+            <input type="checkbox" className={style.checkbox}></input>
+            <label className={style.label}> {props.name} </label>
+            <button className={style.button}>удалить</button>
+        </div >
     );
 }
 

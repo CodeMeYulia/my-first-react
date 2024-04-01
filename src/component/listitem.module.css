@@ -1,0 +1,28 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.1rem;
+    padding: 0.3rem;
+}
+
+.button {
+    background-color: rgb(105, 105, 255);
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 5px #000;
+    color: white;
+    padding: 0.2rem 0.5rem;
+}
+
+.label {
+    padding: 0.15rem 0.5rem;
+    font-size: x-large;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
