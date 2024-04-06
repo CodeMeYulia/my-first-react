@@ -19,6 +19,10 @@ code {
   text-align: center;
 }
 
+.todoblock {
+  background-color: rgb(60, 52, 105);
+}
+
 .tarifes {
   background-color: brown;
   display: flex;

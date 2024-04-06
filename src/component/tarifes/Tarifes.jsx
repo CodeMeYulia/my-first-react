@@ -9,15 +9,15 @@ export default function Rate(props) {
     let colorBackBody;
     let size;
 
-    if (id === "1") {
+    if (id === 1) {
         colorBackHeader = style.cardHeaderBlue
         colorBackBody = style.cardBodyBlue
         size = tarifbase.tarif
-    } else if (id === "2") {
+    } else if (id === 2) {
         colorBackHeader = style.cardHeaderGreen
         colorBackBody = style.cardBodyGreen
         size = tarifbase.tarif
-    } else if (id === "3") {
+    } else if (id === 3) {
         colorBackHeader = style.cardHeaderPink
         colorBackBody = style.cardBodyPink
         size = tarifSelected.tarif
