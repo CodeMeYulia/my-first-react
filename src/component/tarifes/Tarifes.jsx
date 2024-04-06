@@ -1,34 +1,38 @@
 import React from "react"
+import { useState } from "react"
 import style from './tarifes.module.css'
 import tarifbase from './tarifbase.module.css'
 import tarifSelected from './tarifSelected.module.css'
 
 export default function Rate(props) {
     const { title, price, currency, volume, note, id } = props;
+    const [selected, setSelected] = useState(props.selected || false);
+
+    let size = selected ? tarifSelected : tarifbase;
+
+    const handleChange = () => {
+        setSelected(!selected);
+    }
+
     let colorBackHeader;
     let colorBackBody;
-    let size;
 
     if (id === 1) {
         colorBackHeader = style.cardHeaderBlue
         colorBackBody = style.cardBodyBlue
-        size = tarifbase.tarif
     } else if (id === 2) {
         colorBackHeader = style.cardHeaderGreen
         colorBackBody = style.cardBodyGreen
-        size = tarifbase.tarif
     } else if (id === 3) {
         colorBackHeader = style.cardHeaderPink
         colorBackBody = style.cardBodyPink
-        size = tarifSelected.tarif
     } else {
         colorBackHeader = style.cardHeaderBlack
         colorBackBody = style.cardBodyBlack
-        size = tarifbase.tarif
     }
 
     return (
-        <div className={size} id={id}>
+        <div id={id} onClick={handleChange} className={size.tarif}>
             <div className={colorBackHeader}>
                 <h4 className={style.cardTitle}>{title}</h4>
             </div>
