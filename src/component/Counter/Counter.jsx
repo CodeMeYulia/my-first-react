@@ -8,7 +8,7 @@ export default function Counter() {
         setCount(count + 1);
     }
     return (
-        <div>
+        <div className={style.counter}>
             <button type="button" className={style.btnAdd}
                 onClick={handleClick}>
                 +плюс один

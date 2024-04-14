@@ -1,6 +1,12 @@
+.counter {
+    background-color: rgb(2, 124, 114);
+    color: aliceblue;
+    margin: auto;
+}
+
 .btnAdd {
     min-width: 100px;
-    height: 60px;
+    height: 40px;
     background-color: aqua;
     border-radius: 15px;
     border: none;
