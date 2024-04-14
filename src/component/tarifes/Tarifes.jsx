@@ -1,5 +1,4 @@
-import React from "react"
-import { useState } from "react"
+import React, { useState } from "react"
 import style from './tarifes.module.css'
 import tarifbase from './tarifbase.module.css'
 import tarifSelected from './tarifSelected.module.css'
@@ -29,7 +28,8 @@ export default function Rate(props) {
     } else {
         colorBackHeader = style.cardHeaderBlack
         colorBackBody = style.cardBodyBlack
-    }
+    };
+
 
     return (
         <div id={id} onClick={handleChange} className={size.tarif}>

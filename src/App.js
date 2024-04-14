@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react"
 import './index.css'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +12,7 @@ import Listitem from './component/Listitem';
 import Addbutton from './component/addbutton/Addbutton';
 import Rate from './component/tarifes/Tarifes';
 import List from './component/List';
+import Counter from './component/Counter/Counter'
 
 function App() {
 
@@ -21,12 +23,19 @@ function App() {
     { id: 4, title: "Безлимитный 1000", price: "1000", currency: "руб", volume: "200", note: "Объем включенного трафика не ограничен" },
   ];
 
+  const [tasks, setTasks] = useState([]);
+  useEffect(() => {
+    setTasks(JSON.parse(localStorage.getItem('toDoList')))
+    console.log(setTasks);
+  }, [tasks])
+
   return (
     <div className="App">
+
       <Header
         title="Props and State"
       />
-      {/* <List /> */}
+
       {/* НОВЫЙ БЛОК С ТАРИФАМИ */}
       <div className='tarifes'>
         {
@@ -45,28 +54,28 @@ function App() {
         }
       </div>
 
-      {/* {userLoggedIn
-        ?
-        <div>
-          <div>///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</div>
-          <div className='list'>
-            <Listitem name="отправить отклик" />
-            <Listitem name="ответить Грише" />
-            <Listitem name="отмыть зеркало" />
-            <Listitem name="отмолить грехи" />
-            <Listitem name="отвалиться на подушечку" />
+      <div className="btnAdd">
+        <Counter />
+      </div>
 
-          </div>
-          <Addbutton />
-          <div>///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</div>
+      <div className='list'>
+        {
+          tasks.map((item) => {
+            return (
+              <Listitem
+                name={item.name}
+              />
+            )
+          })
+        }
+      </div>
 
-        </div>
-        : <div>x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x </div>
+      <List />
 
-      } */}
+      <Addbutton />
 
-      {/* <Main /> */}
-      {/* <button className='btn1'>птыщ</button> */}
+      <Main />
+      <button className='btn1'>птыщ</button>
       {/* <Wrapper /> */}
 
     </div >
