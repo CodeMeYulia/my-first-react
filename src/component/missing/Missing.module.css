@@ -1,0 +1,29 @@
+.main {
+    background-image: url('/src/component/missing/2472781.jpg');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    border: 1px dashed grey;
+    border-radius: 40px;
+    width: 650px;
+    height: 650px;
+    color: aliceblue;
+    padding: 20px;
+    margin: 40px auto;
+
+    h1 {
+        font-size: 12rem;
+        text-shadow: 3px 1px 3px rgba(25, 9, 46, 0.52);
+    }
+
+    h2 {
+        font-size: 3.3rem;
+        text-shadow: 4px 3px 3px rgba(25, 9, 46, 0.52);
+    }
+
+    .text {
+        margin-top: 250px;
+    }
+
+}

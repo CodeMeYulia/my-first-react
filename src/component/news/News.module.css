@@ -1,0 +1,26 @@
+ul {
+    margin: 50px 100px;
+}
+
+.linkNews {
+    margin: 10px;
+
+    a:link {
+        color: #1c1e22;
+        font-size: 2rem;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:focus {
+        background-color: rgb(191, 151, 218);
+        padding: 5px 20px;
+    }
+
+    a:visited {
+        color: #6b8e97;
+    }
+}

@@ -1,8 +1,14 @@
 .menu {
-    background-color: aqua;
-    font-size: large;
+    background-color: rgb(255, 50, 238);
     display: flex;
+    font-size: 1.3rem;
     justify-content: space-around;
     text-decoration: none;
-    color: aliceblue;
+    padding: 10px;
+
+    a {
+        color: rgb(35, 1, 49);
+        text-decoration: none;
+        font-weight: 400;
+    }
 }

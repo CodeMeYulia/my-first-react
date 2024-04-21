@@ -1,12 +1,15 @@
 import React from "react";
+import style from './Nav.module.css'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
-        <div className="menu">
-            <a href="">Home</a>
-            <a href="https://ru.legacy.reactjs.org/docs/hello-world.html">About</a>
-            <a href="https://itgirlschool.pro/pl/teach/control/lesson/view?id=322563170">Урок 1</a>
-            <a href="https://itgirlschool.pro/pl/teach/control/lesson/view?id=322563171&editMode=0">Урок 2</a>
+        <div className={style.menu}>
+            <Link to="/">Home</Link>
+            <Link to="/counter">Counter</Link>
+            <Link to="/list">List</Link>
+            <Link to="/tarifes">Tarifes</Link>
+            <Link to="/news">News</Link>
         </div>
     )
 }

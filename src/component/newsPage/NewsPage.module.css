@@ -1,0 +1,9 @@
+.backred {
+    background-color: rgb(248, 219, 255);
+    min-width: 20px;
+    min-height: 200px;
+    margin: 30px;
+    font-size: 1.3rem;
+    padding: 30px 100px;
+    text-align: start;
+}

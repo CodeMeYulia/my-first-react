@@ -1,5 +1,6 @@
 import React from "react";
 import Listitem from "./Listitem";
+import Addbutton from './addbutton/Addbutton';
 
 function List() {
 
@@ -8,7 +9,6 @@ function List() {
         { id: 2, name: "сделать домашку", isChecked: "false", color: "green" },
         { id: 3, name: "сделать зарядку", isChecked: "false", color: "red" },
         { id: 4, name: "помедитировать", isChecked: "false", color: "blue" }
-
     ];
 
     return (
@@ -20,7 +20,7 @@ function List() {
                     })
                 }
             </ul>
-            {/* <Charts /> */}
+            <Addbutton />
         </React.Fragment>
     );
 }

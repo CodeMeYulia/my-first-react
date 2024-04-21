@@ -1,7 +1,4 @@
 import React from "react";
-import Form from "../formInput/Form";
-import Charts from "../chart/Charts";
-import CardList from "../cardlist/CardList"
 import HeroList from "../heroes/HeroList"
 
 const Main = () => {
@@ -10,12 +7,8 @@ const Main = () => {
             <h1>Изучаем React</h1>
             <HeroList />
             <br />
-            <div className="divide"></div>
-            <CardList />
-            <Charts />
-            <div className="myForm">
-                <Form />
-            </div>
+            {/* <div className="divide"></div> */}
+
         </div>
     )
 }
