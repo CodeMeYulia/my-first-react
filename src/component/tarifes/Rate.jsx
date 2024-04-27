@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import style from './tarifes.module.css'
+import React from "react";
+import style from './Rate.module.css'
 
 export default function Rate(props) {
-    let { title, price, currency, volume, note, id } = props;
+    let { id, title, price, currency, volume, note, classCard, isActive, handleSelect } = props;
 
     let colorBackHeader;
     let colorBackBody;
-    let classCard = style.tarif
 
     if (id === 1) {
         colorBackHeader = style.cardHeaderBlue
@@ -22,16 +21,11 @@ export default function Rate(props) {
         colorBackBody = style.cardBodyBlack
     };
 
-    const [isActive, setActive] = useState(false);
-
-    const handleClick = () => {
-        setActive(!isActive);
-        console.log('mao');
-        classCard = isActive ? style.tarif : style.activeTarif;
-    };
+    classCard = isActive ? style.activeTarif : style.tarif;
+    console.log(id, classCard, isActive);
 
     return (
-        <div id={id} onClick={handleClick} className={classCard}>
+        <div id={id} onClick={handleSelect} className={classCard}>
             <div className={colorBackHeader}>
                 <h4 className={style.cardTitle}>{title}</h4>
             </div>

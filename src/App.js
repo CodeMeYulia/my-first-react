@@ -59,7 +59,7 @@ function App() {
 
         {/* <div className='list'>
           {
-            tasks.map((item) => {
+            tasks?.map((item) => {
               return (
                 <Listitem
                   name={item.name}

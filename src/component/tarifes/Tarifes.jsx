@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import style from './tarifes.module.css'
-import tarifbase from './tarifbase.module.css'
-import tarifSelected from './tarifSelected.module.css'
+import styles from './Rate.module.css'
 import Rate from "./Rate"
 
 export default function Tarifes() {
@@ -12,7 +11,12 @@ export default function Tarifes() {
         { id: 4, title: "Безлимитный 1000", price: "1000", currency: "руб", volume: "200", note: "Объем включенного трафика не ограничен" }
     ]
 
+    const [isActive, setActive] = useState(false);
 
+    const handleSelect = (e) => {
+        setActive(!isActive);
+        console.log(e.target);
+    }
 
     return (
         <div className='tarifes'>
@@ -27,11 +31,12 @@ export default function Tarifes() {
                             currency={item.currency}
                             volume={item.volume}
                             note={item.note}
+                            isActive={isActive}
+                            handleSelect={handleSelect}
                         />
                     )
                 })
             }
-
         </div>
     )
 }
