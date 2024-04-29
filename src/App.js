@@ -6,7 +6,7 @@ import Header from './component/header/Header';
 import Main from './component/main/Main';
 import Listitem from './component/Listitem';
 import Rate from './component/tarifes/Tarifes';
-import List from './component/List';
+import ListTodo from './component/ListTodo/ListTodo';
 import Counter from './component/counter/Counter'
 import Nav from './component/nav/Nav'
 import Tarifes from './component/tarifes/Tarifes'
@@ -49,7 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/counter" element={<Counter />} />
-          {/* <Route path="/list" element={<List />} /> */}
+          <Route path="/listtodo" element={<ListTodo />} />
           <Route path="/tarifes" element={<Tarifes />} />
           <Route path="/news" element={<News news={news} />} />
           <Route path="/news/:id" element={<NewsPage news={news} />} />

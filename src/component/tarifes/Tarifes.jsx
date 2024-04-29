@@ -14,7 +14,7 @@ export default function Tarifes() {
     const [isActive, setActive] = useState(false);
 
     const handleSelect = (e) => {
-        setActive(!isActive);
+        setActive(e.target = !isActive);
         console.log(e.target);
     }
 

@@ -23,9 +23,7 @@ code {
   text-align: center;
 }
 
-.todoblock {
-  background-color: rgb(60, 52, 105);
-}
+
 
 .tarifes {
   background-color: brown;
@@ -165,4 +163,16 @@ img {
   height: 330px;
   z-index: 10;
   box-shadow: 0px 4px 5px 9px rgba(97, 97, 97, 0.64);
+}
+
+.label {
+  padding: 0.15rem 0.5rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.labelDone {
+  padding: 0.15rem 0.5rem;
+  font-size: 1.3rem;
+  text-decoration: line-through;
 }
