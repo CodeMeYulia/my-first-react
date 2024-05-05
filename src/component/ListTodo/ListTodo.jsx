@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import style from './ListTodo.module.css'
 import Todoitem from "./Todoitem";
+import Button from "../../Button";
 
 function ListTodo() {
     //состояние массива задач, по умолч  - пустое
     const [todos, setTodos] = useState([]);
     //состояние поля ввода задачи, по умолч  - пустое
     const [inputValue, setInputValue] = useState("");
-    //состояние чекера задачи, по умолч  - не отмечено
-    const [checked, setChecked] = useState(false);
-    //по умолчанию присваиваем стиль незачеркунутый
-    const [classNameLabel, setClassNameLabel] = useState(false);
+
+
 
     //кнопка добавления задачи
     const addTodo = () => {
@@ -27,21 +26,17 @@ function ListTodo() {
         setTodos(newTodos);
     }
 
-    //зачеркнуть выполненное
-    const handleCheckedState = (e) => {
-        const { checked } = e.target;
-        if (e.target) {
-            setChecked(!checked);
-            setClassNameLabel(!classNameLabel);
-        }
+    const [ShowTranslate, setShowTranslate] = useState(false);
+
+    function handlePush() {
+        setShowTranslate(!ShowTranslate);
     }
 
-    // const crossTodo = (e) => {
-    //     if (e.target.checked) {
-    //         setClassNameLabel(true);
-    //     }
-    // }
+    let marking = <Button sayHi={handlePush}></Button>
 
+    if (ShowTranslate) {
+        marking = <p>Hi!</p>
+    }
     return (
         <React.Fragment>
             <h1>Todo List</h1>
@@ -56,17 +51,22 @@ function ListTodo() {
                                 name={todo}
                                 index={index}
                                 deleteTodo={deleteTodo}
-                                handleCheckedState={handleCheckedState}
-                                checked={checked}
-                                // handleClick={crossTodo}
-                                classNameLabel={classNameLabel}
+                            // handleCheckedState={handleCheckedState}
+                            // checked={checked}
+                            // handleClick={crossTodo}
+                            // classNameLabel={classNameLabel}
                             />
                         )
                     })
                 }
             </ul>
 
-        </React.Fragment>
+            <div>
+                <h3>Заголовок</h3>
+                {marking}
+            </div>
+
+        </React.Fragment >
     );
 }
 
