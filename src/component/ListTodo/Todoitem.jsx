@@ -5,7 +5,7 @@ function Todoitem({ index, name, deleteTodo }) {
 
     // console.log(name, classNameLabel, typeof classNameLabel, checked);
 
-    //состояние чекера задачи, по умолч  - не отмечено
+    //состояние чекера задачи, по умолч - не отмечено
     const [checked, setChecked] = useState(false);
 
     //по умолчанию присваиваем стиль незачеркунутый

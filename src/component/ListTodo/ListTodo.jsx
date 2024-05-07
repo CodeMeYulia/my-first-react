@@ -2,20 +2,25 @@ import React, { useState } from "react";
 import style from './ListTodo.module.css'
 import Todoitem from "./Todoitem";
 import Button from "../../Button";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function ListTodo() {
     //состояние массива задач, по умолч  - пустое
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useLocalStorage("toDoList", [])
     //состояние поля ввода задачи, по умолч  - пустое
     const [inputValue, setInputValue] = useState("");
 
-
+    // useEffect(() => {
+    //     setTodos(JSON.parse(localStorage.getItem("toDoList")))
+    //     setTodos([])
+    // }, [])
 
     //кнопка добавления задачи
     const addTodo = () => {
         if (inputValue !== "") {
             setTodos([...todos, inputValue]);
             setInputValue("")
+            // localStorage.setItem("toDoList", JSON.stringify(todos))
         }
     }
 
@@ -24,6 +29,7 @@ function ListTodo() {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
         setTodos(newTodos);
+        localStorage.setItem("toDoList", JSON.stringify(newTodos))
     }
 
     const [ShowTranslate, setShowTranslate] = useState(false);
@@ -35,8 +41,9 @@ function ListTodo() {
     let marking = <Button sayHi={handlePush}></Button>
 
     if (ShowTranslate) {
-        marking = <p>Hi!</p>
+        marking = <p> Привет, котик!</p>
     }
+
     return (
         <React.Fragment>
             <h1>Todo List</h1>
@@ -51,10 +58,6 @@ function ListTodo() {
                                 name={todo}
                                 index={index}
                                 deleteTodo={deleteTodo}
-                            // handleCheckedState={handleCheckedState}
-                            // checked={checked}
-                            // handleClick={crossTodo}
-                            // classNameLabel={classNameLabel}
                             />
                         )
                     })
