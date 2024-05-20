@@ -1,9 +1,8 @@
-label,
-input {
+.name {
     margin: 5px;
 }
 
-p {
+.username {
     background-color: aqua;
     width: 32%;
     margin: auto;

@@ -6,9 +6,6 @@ const Main = () => {
         <div className="main">
             <h1>Изучаем React</h1>
             <HeroList />
-            <br />
-            {/* <div className="divide"></div> */}
-
         </div>
     )
 }

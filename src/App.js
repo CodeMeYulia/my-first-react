@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import './index.css'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './component/header/Header';
 import Main from './component/main/Main';
-import Listitem from './component/Listitem';
-import Rate from './component/tarifes/Tarifes';
 import ListTodo from './component/ListTodo/ListTodo';
 import Counter from './component/counter/Counter'
 import Nav from './component/nav/Nav'
@@ -17,14 +15,6 @@ import NewsPage from './component/newsPage/NewsPages'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-
-  // const [tasks, setTasks] = useState([]);
-
-  // useEffect(() => {
-  //   setTasks(JSON.parse(localStorage.getItem('toDoList')))
-  // })
-
-  // Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
 
   const news = [
     { id: 1, title: "Метод pomodoro для повышения продуктивности", text: "Подход заключается в том, чтобы чередовать время на работу и перерывы. Один помидор — это 25 минут работы, за которыми следует пятиминутный перерыв. После четырёх помидоров нужно сделать длинный перерыв. Разбивая работу на короткие сфокусированные интервалы, проще сохранять мотивацию и продуктивность." },
@@ -40,7 +30,6 @@ function App() {
     { id: 12, title: "Как успевать спать", text: "Сокращение продолжительности сна «всего лишь» на час чревато серьезными негативными последствиями, самое обидное из которых: меньше спим — меньше успеваем." }
   ]
 
-
   return (
     <Router>
       <div className="App">
@@ -53,23 +42,8 @@ function App() {
           <Route path="/tarifes" element={<Tarifes />} />
           <Route path="/news" element={<News news={news} />} />
           <Route path="/news/:id" element={<NewsPage news={news} />} />
-
           <Route path="*" element={<Missing />} />
         </Routes>
-
-        {/* <div className='list'>
-          {
-            tasks?.map((item) => {
-              return (
-                <Listitem
-                  name={item.name}
-                />
-              )
-            })
-          }
-        </div> */}
-
-        {/* <button className='btn1'>птыщ</button> */}
 
       </div >
     </Router >

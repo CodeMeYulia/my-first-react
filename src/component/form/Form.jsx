@@ -19,25 +19,25 @@ function Form() {
     return (
         <>
             <form>
-                <label>
+                <label className={style.name}>
                     First name
-                    <input
+                    <input className={style.name}
                         type="text"
                         name="firstName"
                         value={state.firstName}
                         onChange={handleChange}
                     />
                 </label>
-                <label>
+                <label className={style.name}>
                     Last name
-                    <input
+                    <input className={style.name}
                         type="text"
                         name="lastName"
                         value={state.lastName}
                         onChange={handleChange}
                     />
                 </label>
-                <p>
+                <p className={style.username}>
                     {state.firstName} {state.lastName}
                 </p>
             </form>
