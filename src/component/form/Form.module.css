@@ -1,0 +1,10 @@
+label,
+input {
+    margin: 5px;
+}
+
+p {
+    background-color: aqua;
+    width: 32%;
+    margin: auto;
+}

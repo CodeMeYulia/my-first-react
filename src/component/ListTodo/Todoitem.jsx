@@ -17,7 +17,6 @@ function Todoitem({ index, name, deleteTodo }) {
         setClassNameLabel(!classNameLabel);
     }
 
-
     return (
         <li className={style.item}>
             <div>
@@ -27,11 +26,10 @@ function Todoitem({ index, name, deleteTodo }) {
                     onClick={handleCheckedState}
                     className={style.checkbox}
                 ></input>
-                <label className={checked === false && classNameLabel === false ? style.label : style.labelDone}> {name} что-то тут </label>
+                <label className={checked === false && classNameLabel === false ? style.label : style.labelDone}> {name}
+                </label>
 
             </div>
-
-
             <button onClick={() => deleteTodo(index)} className={style.button}>удалить</button>
         </li >
     )

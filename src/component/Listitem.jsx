@@ -18,11 +18,8 @@ function Listitem(props) {
                 checked={props.isChecked}
                 onClick={hadleCheckedState}
             ></input>
-
-
             <label className={classNameLabel}
                 style={
-                    // checked ? { textDecorationLine: "line-through" } : { textDecorationLine: "none" }
                     { color: props.color }
                 }>{props.name}</label>
             <button className={style.button}>удалить</button>
