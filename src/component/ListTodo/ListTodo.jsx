@@ -19,7 +19,6 @@ function ListTodo() {
         marking = <p> Привет, котик!</p>
     }
 
-
     //состояние массива задач, по умолч  - пустое
     const [todos, setTodos] = useLocalStorage("toDoList", [])
     //состояние поля ввода задачи, по умолч  - пустое
